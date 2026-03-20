@@ -2,16 +2,14 @@
 .hero-section {
     background: url(../img/fundo-hero.png) no-repeat;
     position: relative;
-    min-height: 100vh;
+    height: 100dvh; 
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    /* text on left */
     background-size: cover;
-    background-position: top;
+    background-position: center; 
     width: 100%;
     overflow: hidden;
-    
 }
 
 
@@ -125,10 +123,12 @@
 @media (max-width: 720px){
     .hero-section{
         background: url(../img/fundo-hero-mobile.png);
-        background-position: center;
+        background-size: cover;
+        background-position: center top;
         display: flex;
         align-items: center;
         justify-content: center;
+        min-height: 100dvh !important;
     }
     .hero-title {
         font-size: 2.5rem;
@@ -152,18 +152,15 @@
         color: var(--color-white);
     }
     .logo{
-        color: var(--color-white);
         font-weight: 700;
         font-size: 1.1rem;
     }
 }
 
 @media (max-width: 510px){
-    .hero-section{
-        background: url(../img/fundo-hero-mobile.png);
-        background-position: center;
-        
-        
+    .hero-section {
+        background: url(../img/fundo-hero-mobile.png) no-repeat center/cover;
+        height: 100dvh;
     }
     .hero-content{
         margin-left: 0;
