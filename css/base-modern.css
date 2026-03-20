@@ -1,0 +1,93 @@
+/* Modern global base: overrides legacy `base.css` with responsive typography */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-black: #0f0f0f;
+  --color-pink: #f85656;
+  --color-nude: #f3e7e9;
+  --color-white: #ffffff;
+  --color-pink-hover: #fb247a;
+
+  --color-nude-mid: #e8d0d4;
+  --color-nude-dark: #c9a8ae;
+  --color-text: #2a1618;
+  --color-muted: #8c6468;
+
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
+
+  --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  line-height: 1.6;
+  color: var(--color-black);
+  background: var(--color-white);
+}
+
+::selection {
+  background-color: var(--color-pink);
+  color: var(--color-black);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+h1,
+h2 {
+  font-family: var(--font-display);
+  font-weight: 300;
+  line-height: 1.15;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem) !important;
+}
+
+p {
+  color: var(--color-black);
+  font-size: 1rem !important;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  p {
+    font-size: 0.8rem !important;
+  }
+
+  h1 {
+    font-size: clamp(1.8rem, 8vw, 2.6rem);
+  }
+
+  h2 {
+    font-size: clamp(1.6rem, 7vw, 2.2rem) !important;
+  }
+}
+

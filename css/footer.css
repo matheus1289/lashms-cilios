@@ -1,0 +1,120 @@
+/* Footer */
+.footer {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: 80px 0 0;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 48px;
+    padding-bottom: 40px !important;
+}
+
+.footer-logo {
+    font-size: 1.75rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.footer-tagline {
+    opacity: 0.75;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.footer-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: var(--color-pink);
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--color-white);
+    opacity: 0.85;
+    text-decoration: none;
+    transition: var(--transition-smooth);
+}
+
+.footer-link:hover {
+    opacity: 1;
+    color: var(--color-pink);
+    transform: translateX(4px);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--color-white);
+    padding: 32px 0;
+    text-align: center;
+    opacity: 0.6;
+}
+.footer-bottom p{
+    color: var(--color-white);
+}
+.footer-bottom a {
+    color: var(--color-pink);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Floating WhatsApp Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    width: 64px;
+    height: 64px;
+    background-color: var(--color-pink);
+    color: var(--color-white);
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 8px 30px rgba(247, 198, 217, 0.5);
+    transition: var(--transition-smooth);
+    animation: pulse 2s infinite;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 40px rgba(247, 198, 217, 0.7);
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        box-shadow: 0 8px 30px rgba(247, 198, 217, 0.5);
+    }
+
+    50% {
+        box-shadow: 0 8px 40px rgba(247, 198, 217, 0.8);
+    }
+}
+
+@media (max-width: 390px){
+    .footer-content{
+        gap: 20px;
+    }
+    .footer-logo {
+        margin: 0px;
+        
+    }
+}

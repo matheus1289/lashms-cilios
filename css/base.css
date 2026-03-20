@@ -1,0 +1,60 @@
+/* Base and global resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-black: #0f0f0f;
+    --color-pink: #f85656;
+    --color-nude: #f3e7e9;
+    --color-white: #ffffff;
+    --color-pink-hover: #fb247a;
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+::selection {
+    background-color: var(--color-pink);
+    color: var(--color-black);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+h2{
+    font-size: 3rem !important;
+}
+
+@media (max-width: 640px){
+    h2{
+        font-size: 2rem !important;
+    }
+    p{
+        font-size: 1rem !important;
+    }
+}
+
+@media (max-width: 400px){
+    h2{
+        font-size: 1.8rem !important;
+
+    }
+    p{
+        font-size: 0.8rem !important;
+    }
+    
+}

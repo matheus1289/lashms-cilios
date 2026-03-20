@@ -1,0 +1,15 @@
+/* global imports and remaining rules managed in separate files */
+@import "./css/base.css";
+@import "./css/header.css";
+@import "./css/hero.css";
+@import "./css/animations.css";
+@import "./css/about.css";
+@import "./css/services.css";
+@import "./css/gallery.css";
+@import "./css/testimonials.css";
+@import "./css/appointment.css";
+@import "./css/instagram.css";
+@import "./css/footer.css";
+@import "./css/base-modern.css";
+
+

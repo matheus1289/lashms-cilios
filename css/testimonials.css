@@ -1,0 +1,77 @@
+/* Testimonials Section */
+.testimonials-section {
+    padding: 120px 0;
+    background: linear-gradient(180deg, var(--color-nude) 0%, var(--color-pink) 100%);
+    background: url(../img/fundo-services\ \(2\).png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+    margin-top: 60px;
+}
+
+.testimonial-card {
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    transition: var(--transition-smooth);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(15, 15, 15, 0.15);
+}
+
+.testimonial-content {
+    padding: 40px 28px;
+    text-align: center;
+}
+
+.testimonial-stars {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    margin-bottom: 20px;
+}
+
+.testimonial-text {
+    font-size: 1.1rem;
+    color: var(--color-black);
+    opacity: 0.85;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.testimonial-name {
+    font-weight: 500;
+    color: var(--color-black);
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .testimonials-section {
+        padding: 70px 0 60px;
+    }
+
+    .testimonials-grid {
+        margin-top: 40px;
+        gap: 16px;
+        grid-template-columns: 1fr;
+    }
+
+    .testimonial-content {
+        padding: 32px 18px;
+    }
+
+    .testimonial-text {
+        font-size: 1rem;
+        margin-bottom: 14px;
+    }
+}
